@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    </head>
+<body onload="startTime()">
+    <div class="cal-container">
+        <!-- clock -->
+        <div class="clock">
+            <p id="time"></p>
+        </div>
+         <!-- screen -->
+         <div class="display">
+            <input type="text" id="screen" readonly placeholder="0">
+         </div>
+
+        <!-- cal-buttons -->
+        <div class="keys">
+            <p> 
+                <button class="btn btn-sign" onclick="sine()">sin</button>
+                <button class="btn btn-sign" onclick="cosine()">cos</button>
+                <button class="btn btn-sign" onclick="tan()">tan</button>
+                <button class="btn btn-sign" onclick="inverseSine()">sin<sup>-1</sup></button>
+                <button class="btn btn-sign" onclick="inverseCosine()">cos<sup>-1</sup></button>
+            </p>
+            <p> 
+                <button class="btn btn-sign" onclick="inverseTan()">tan<sup>-1</sup></button>
+                <button class="btn btn-sign" onclick="press('22/7')">π</button>
+                <button class="btn btn-sign" onclick="ln()">ln</button>
+                <button class="btn btn-sign" onclick="log()">log</button>
+                <button class="btn btn-sign" onclick="percent()">%</button>              
+            </p>
+            <p>
+                <button class="btn btn-sign" onclick="square()">x<sup>2</sup></button>
+                <button class="btn btn-sign" onclick="cube()">x<sup>3</sup></button>
+                <button class="btn btn-sign" onclick="sqrt()">√</button>
+                <input type="button" value="(" class="btn btn-sign" onclick="press('(')">
+                <input type="button" value=")" class="btn btn-sign" onclick="press(')')" >
+            </p>
+
+            <p style="margin-top: 30px;"> 
+                <input type="button" value="7" class="btn btn-num" onclick="press(7)">
+                <input type="button" value="8" class="btn btn-num" onclick="press(8)">
+                <input type="button" value="9" class="btn btn-num" onclick="press(9)">
+                <input type="button" value="Del" class="btn btn-red" onclick="backSpace()">
+                <input type="button" value="C" class="btn btn-red" onclick="clearScreen('')">    
+                
+            </p>
+            <p> 
+                <input type="button" value="4" class="btn btn-num" onclick="press(4)">
+                <input type="button" value="5" class="btn btn-num" onclick="press(5)">
+                <input type="button" value="6" class="btn btn-num" onclick="press(6)">
+                <input type="button" value="x" class="btn btn-opera" onclick="press('*')">
+                <input type="button" value="/" class="btn btn-opera" onclick="press('/')">    
+                
+            </p>
+            <p> 
+                <input type="button" value="1" class="btn btn-num" onclick="press(1)">
+                <input type="button" value="2" class="btn btn-num" onclick="press(2)">
+                <input type="button" value="3" class="btn btn-num" onclick="press(3)">
+                <input type="button" value="+" class="btn btn-opera" onclick="press('+')">
+                <input type="button" value="- " class="btn btn-opera" onclick="press('-')">    
+                
+            </p>
+            <p> 
+                <input type="button" value="0" class="btn btn-num" onclick="press(0)">
+                <input type="button" value="±" class="btn btn-opera" onclick="plusMinus()">
+                <input type="button" value="." class="btn btn-num" onclick="press('.')">
+                <input type="button" value="Exp" class="btn btn-opera" onclick="exp()">
+                <input type="button" value="=" class="btn btn-opera" onclick="calculate()">    
+                
+            </p>
+        </div>
+
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
